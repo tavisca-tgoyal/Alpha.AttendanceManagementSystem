@@ -10,9 +10,10 @@ namespace AMS.MiddleLayer
 {
     public class StudentAttendanceReport
     {
-        public int NoOfClassesAttended = 0;
-        public double AttendancePercentage=0;
-        public int NoOfClassesTaken=0;
+        public int NoOfClassesAttended = 0;        
+        public double AttendancePercentage = 0;
+        public int NoOfClassesTaken { get; set; }
+
 
         public StudentAttendanceReport(Student student)
         {
@@ -28,7 +29,5 @@ namespace AMS.MiddleLayer
             AttendancePercentage = (Double)decimal.Divide(NoOfClassesAttended, NoOfClassesTaken);
         }
 
-        
-        
     }
 }

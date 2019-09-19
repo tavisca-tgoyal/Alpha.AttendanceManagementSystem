@@ -10,8 +10,7 @@ namespace AMS.MiddleLayer.DataTypes
 {
     public class TeacherAttendanceReport
     {
-        public int NoOfClassesTaken=0;
-        public double AttendancePercentage { get; set; }
+        public int NoOfClassesTaken { get; set; }
 
         public TeacherAttendanceReport(Teacher teacher)
         {

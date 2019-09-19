@@ -1,4 +1,4 @@
-﻿using AMS.MiddleLayer.Personna;
+using AMS.MiddleLayer.Personna;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,7 +12,6 @@ namespace AMS.MiddleLayer
         /// </summary>
         /// <returns></returns>
         public Dictionary<int, int> StudentAttendance ;
-
         public string Id { get; set; }
         public string Name { get; set; }
         public Teacher Teacher { get; set; }
