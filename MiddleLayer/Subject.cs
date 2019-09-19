@@ -14,6 +14,12 @@ namespace AMS.MiddleLayer
         public string Name { get; set; }
         public Teacher Teacher { get; set; }
         public int TotalAttendance { get; set; }
+
+    
+        /// <summary>
+        ///this dictionary is mapping studentid to their attendance
+        /// </summary>
+        /// <returns></returns>
         public ref Dictionary<int, int> GetEnrolledStudents()
         {
             return  ref _studentAttendance;

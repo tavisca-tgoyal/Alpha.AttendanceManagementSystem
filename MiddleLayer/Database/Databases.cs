@@ -1,11 +1,9 @@
-﻿using AMS.MiddleLayer;
-using AMS.MiddleLayer.Personna;
-using System;
+﻿using AMS.MiddleLayer.Personna;
 using System.Collections.Generic;
 
-namespace AMS.Database
+namespace AMS.MiddleLayer.Database
 {
-    public static class Database
+    public static class Databases
     {
         public static List<Admin> Admins = new List<Admin>();
         public static List<Teacher> Teachers = new List<Teacher>();
