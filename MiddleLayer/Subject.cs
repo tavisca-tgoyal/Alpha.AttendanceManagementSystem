@@ -7,15 +7,16 @@ namespace AMS.MiddleLayer
 {
     public class Subject
     {
+        private Dictionary<int, int> _studentAttendance = new Dictionary<int, int>();
+
+
         public string Id { get; set; }
         public string Name { get; set; }
         public Teacher Teacher { get; set; }
-        public List<Student> EnrolledStudents { get; set; }
-
-        public object GetEnrolledStudents()
+        public int TotalAttendance { get; set; }
+        public ref Dictionary<int, int> GetEnrolledStudents()
         {
-            return new NotImplementedException();
+            return  ref _studentAttendance;
         }
-
     }
 }

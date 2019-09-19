@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpha.AttendanceManagementSystem", "Alpha.AttendanceManagementSystem\Alpha.AttendanceManagementSystem.csproj", "{FBB2A5DD-360D-4877-B054-B41CCBB26AE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alpha.AttendanceManagementSystem", "Alpha.AttendanceManagementSystem\Alpha.AttendanceManagementSystem.csproj", "{FBB2A5DD-360D-4877-B054-B41CCBB26AE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMS.MiddleLayer", "MiddleLayer\AMS.MiddleLayer.csproj", "{E909E78F-A58D-4A21-8A2F-CF06D495B949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AMS.MiddleLayer", "MiddleLayer\AMS.MiddleLayer.csproj", "{E909E78F-A58D-4A21-8A2F-CF06D495B949}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMS.Database", "AMS.Database\AMS.Database.csproj", "{0D54A4AE-D166-42C4-A8E8-F8D8319FB721}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AMS.Database", "AMS.Database\AMS.Database.csproj", "{0D54A4AE-D166-42C4-A8E8-F8D8319FB721}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseServiceProvider", "DatabaseServiceProvider\DatabaseServiceProvider.csproj", "{34BAED2C-8C53-413E-A95A-65C23144CD73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{0D54A4AE-D166-42C4-A8E8-F8D8319FB721}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D54A4AE-D166-42C4-A8E8-F8D8319FB721}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D54A4AE-D166-42C4-A8E8-F8D8319FB721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34BAED2C-8C53-413E-A95A-65C23144CD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34BAED2C-8C53-413E-A95A-65C23144CD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34BAED2C-8C53-413E-A95A-65C23144CD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34BAED2C-8C53-413E-A95A-65C23144CD73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
