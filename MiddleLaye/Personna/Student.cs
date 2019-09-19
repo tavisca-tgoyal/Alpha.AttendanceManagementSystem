@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using AMS.MiddleLayer.DataTypes;
 
 namespace AMS.MiddleLayer.Personna
 {

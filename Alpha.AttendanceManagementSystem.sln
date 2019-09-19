@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alpha.AttendanceManagementSystem", "Alpha.AttendanceManagementSystem\Alpha.AttendanceManagementSystem.csproj", "{FBB2A5DD-360D-4877-B054-B41CCBB26AE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddleLayer", "MiddleLaye\MiddleLayer.csproj", "{67CB71F6-7937-4D82-8276-C5A40FB0EA5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMS.MiddleLayer", "MiddleLaye\AMS.MiddleLayer.csproj", "{67CB71F6-7937-4D82-8276-C5A40FB0EA5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
