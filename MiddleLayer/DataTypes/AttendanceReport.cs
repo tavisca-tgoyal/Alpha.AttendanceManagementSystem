@@ -7,13 +7,15 @@ namespace AMS.MiddleLayer
 {
     public class AttendanceReport
     {
-        public int NoOfClassesConducted { get; set; }
-        public int NoOfClassesTaken { get; set; }
-        public double AttendancePercentage { get; set; }
+        public int NoOfClassesConducted;
+        public int NoOfClassesTaken;
+        public double AttendancePercentage;
 
         public AttendanceReport(Student student)
         {
-            
+               
         }
+
+        
     }
 }

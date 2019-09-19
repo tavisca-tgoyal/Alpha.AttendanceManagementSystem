@@ -14,9 +14,9 @@ namespace AMS.MiddleLayer.Personna
             this.Password = pass;
         }
 
-        public object ViewAttendanceReport()
+        public AttendanceReport ViewAttendanceReport()
         {
-            return new NotImplementedException();
+            return new AttendanceReport(this);
         }
 
         public object ViewEligibiityStatus()
