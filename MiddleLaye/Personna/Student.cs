@@ -15,7 +15,7 @@ namespace AMS.MiddleLayer.Personna
             this.Password = pass;
         }
 
-        public IAttendanceReport ViewAttendanceReport()
+        public StudentAttendanceReport ViewAttendanceReport()
         {
             return new StudentAttendanceReport(this);
         }

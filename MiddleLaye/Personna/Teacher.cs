@@ -34,7 +34,7 @@ namespace AMS.MiddleLayer.Personna
             EligiblePercentage = percentage;
         }
 
-        public IAttendanceReport ViewReport()
+        public TeacherAttendanceReport ViewReport()
         {
             return new TeacherAttendanceReport(this);   
         }

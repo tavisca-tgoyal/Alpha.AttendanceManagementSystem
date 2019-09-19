@@ -8,9 +8,11 @@ using AMS.MiddleLayer.DataTypes;
 
 namespace AMS.MiddleLayer
 {
-    public class StudentAttendanceReport : IAttendanceReport
+    public class StudentAttendanceReport
     {
         public int NoOfClassesAttended = 0;
+        public double AttendancePercentage=0;
+        public int NoOfClassesTaken=0;
 
         public StudentAttendanceReport(Student student)
         {
@@ -26,7 +28,7 @@ namespace AMS.MiddleLayer
             AttendancePercentage = (Double)decimal.Divide(NoOfClassesAttended, NoOfClassesTaken);
         }
 
-        public int NoOfClassesTaken { get; set; }
-        public double AttendancePercentage { get; set; }
+        
+        
     }
 }
