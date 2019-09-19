@@ -3,17 +3,16 @@ using AMS.MiddleLayer.Database;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using AMS.MiddleLayer.DataTypes;
 
 
 namespace AMS.MiddleLayer
 {
-    public class AttendanceReport
+    public class StudentAttendanceReport : IAttendanceReport
     {
-        public int NoOfClassesAttended=0;
-        public int NoOfClassesTaken=0;
-        public double AttendancePercentage=0;
+        public int NoOfClassesAttended = 0;
 
-        public AttendanceReport(Student student)
+        public StudentAttendanceReport(Student student)
         {
             foreach (var subject in Databases.Subjects)
             {
@@ -27,6 +26,7 @@ namespace AMS.MiddleLayer
             AttendancePercentage = (Double)decimal.Divide(NoOfClassesAttended, NoOfClassesTaken);
         }
 
-        
+        public int NoOfClassesTaken { get; set; }
+        public double AttendancePercentage { get; set; }
     }
 }
