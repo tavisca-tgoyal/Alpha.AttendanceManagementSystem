@@ -17,7 +17,12 @@ namespace AMS.MiddleLayer.Personna
 
         public void MarkAttendance(Subject subject)
         {
-            
+            var studentList = subject.GetEnrolledStudents();
+            foreach (var student in studentList.Keys)
+            {
+                studentList[student] += 1;
+            }
+            subject.TotalAttendance += 1;
         }
 
         public object ViewStudentAttendanceReport() {
@@ -26,6 +31,11 @@ namespace AMS.MiddleLayer.Personna
 
         public void DeclareEligiblePercentage(double percentage) {
             EligiblePercentage = percentage;
+        }
+
+        public Teache ViewReport()
+        {
+
         }
     }
 }

@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AMS.MiddleLayer", "MiddleLa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AMS.Database", "AMS.Database\AMS.Database.csproj", "{0D54A4AE-D166-42C4-A8E8-F8D8319FB721}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseServiceProvider", "DatabaseServiceProvider\DatabaseServiceProvider.csproj", "{34BAED2C-8C53-413E-A95A-65C23144CD73}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{0D54A4AE-D166-42C4-A8E8-F8D8319FB721}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D54A4AE-D166-42C4-A8E8-F8D8319FB721}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D54A4AE-D166-42C4-A8E8-F8D8319FB721}.Release|Any CPU.Build.0 = Release|Any CPU
-		{34BAED2C-8C53-413E-A95A-65C23144CD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{34BAED2C-8C53-413E-A95A-65C23144CD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{34BAED2C-8C53-413E-A95A-65C23144CD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{34BAED2C-8C53-413E-A95A-65C23144CD73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
