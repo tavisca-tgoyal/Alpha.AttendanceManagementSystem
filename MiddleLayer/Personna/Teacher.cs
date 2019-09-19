@@ -15,8 +15,9 @@ namespace AMS.MiddleLayer.Personna
             this.Password = pass;
         }
 
-        public void MarkAttendance() {
-
+        public void MarkAttendance(Subject subject)
+        {
+            
         }
 
         public object ViewStudentAttendanceReport() {
