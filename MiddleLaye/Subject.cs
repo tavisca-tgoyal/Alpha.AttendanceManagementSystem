@@ -11,7 +11,7 @@ namespace AMS.MiddleLayer
         ///this dictionary is mapping studentid to their attendance
         /// </summary>
         /// <returns></returns>
-        private Dictionary<int, int> _studentAttendance = new Dictionary<int, int>();
+        public Dictionary<int, int> StudentAttendance ;
 
         public string Id { get; set; }
         public string Name { get; set; }
@@ -20,7 +20,7 @@ namespace AMS.MiddleLayer
        
         public ref Dictionary<int, int> GetEnrolledStudents()
         {
-            return  ref _studentAttendance;
+            return  ref StudentAttendance;
         }
     }
 }

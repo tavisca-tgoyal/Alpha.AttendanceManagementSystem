@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AMS.MiddleLayer.Personna;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,7 +16,7 @@ namespace AMS.MiddleLayer
             this.Password = pass;
         }
 
-        public void AddNewTeacher()
+        public void AddNewTeacher(Teacher teacher)
         {
 
         }
