@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Alpha.AttendanceManagementSystem.Services;
-using AMS.MiddleLayer.Personna;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,33 +12,15 @@ namespace Alpha.AttendanceManagementSystem.Controllers
     [ApiController]
     public class TeacherController : ControllerBase
     {
-        private readonly Iservice _service;
-        public TeacherController(Iservice service)
+        private readonly ITeacherService _ITeacherService ;
+        public TeacherController(ITeacherService TeacherService)
         {
-            _service = service;
+            _ITeacherService = TeacherService;
         }
         [HttpGet]
-        public List<Teacher> Get()
+        public ActionResult Get()
         {
-            return _service.GetTeacherList();
+            return 
         }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public Teacher Get(int id)
-        {
-            return _service.GetTeacherByid(id);
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]Teacher t)
-        {
-            _service.AddTeacher(t);
-           
-
-        }
-
-       
     }
 }

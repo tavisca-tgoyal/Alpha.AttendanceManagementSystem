@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using AMS.MiddleLayer.Database;
 using AMS.MiddleLayer.DataTypes;
 
 namespace AMS.MiddleLayer.Personna
@@ -26,8 +27,12 @@ namespace AMS.MiddleLayer.Personna
             subject.TotalAttendance += 1;
         }
 
-        public object ViewStudentAttendanceReport() {
-            return new NotImplementedException();
+        public List<StudentAttendanceReport> ViewStudentAttendanceReport() {
+
+            List<StudentAttendanceReport> studentAttendanceList = new List<StudentAttendanceReport>();
+            foreach(var item in Databases.Students)
+                studentAttendanceList.Add(new StudentAttendanceReport(item));
+            return studentAttendanceList;
         }
 
         public void DeclareEligiblePercentage(double percentage) {
