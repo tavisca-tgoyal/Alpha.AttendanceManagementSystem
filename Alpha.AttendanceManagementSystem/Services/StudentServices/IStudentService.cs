@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Alpha.AttendanceManagementSystem.Services
+namespace Alpha.AttendanceManagementSystem.Services.StudentServices
 {
-    public class StudentService
+    interface IStudentService
     {
     }
 }

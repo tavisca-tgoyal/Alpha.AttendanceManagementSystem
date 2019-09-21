@@ -60,12 +60,15 @@ namespace Alpha.AttendanceManagementSystem.Services.TeacherServices
 
         public void MarkAttendance(string subjectId)
         {
-            throw new NotImplementedException();
+            Subject subject = Databases.Subjects.Find(sub => sub.Id == subjectId);
+            Teacher teacher = subject.Teacher;
+            teacher.MarkAttendance(subject);
         }
 
-        public void SetEligibilityPercentage(int teacherId)
+        public void SetEligibilityPercentage(int teacherId, double value)
         {
-            throw new NotImplementedException();
+            Teacher teacher = Databases.Teachers.Find(t => t.Id == teacherId);
+            teacher.EligiblePercentage = value;
         }
     }
 }

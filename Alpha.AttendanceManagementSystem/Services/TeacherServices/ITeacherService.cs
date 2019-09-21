@@ -20,6 +20,6 @@ namespace Alpha.AttendanceManagementSystem.Services.TeacherServices
 
         List<StudentAttendanceReport> GetStudentReport();
 
-        void SetEligibilityPercentage(int teacherId);
+        void SetEligibilityPercentage(int teacherId, double value);
     }
 }

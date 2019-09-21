@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Alpha.AttendanceManagementSystem.Services;
+using Alpha.AttendanceManagementSystem.Services.DataTypes;
+using Alpha.AttendanceManagementSystem.Services.TeacherServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,9 +20,9 @@ namespace Alpha.AttendanceManagementSystem.Controllers
             _ITeacherService = TeacherService;
         }
         [HttpGet]
-        public ActionResult Get()
+        public List<Teacher_IdAndName> Get()
         {
-            return 
+            return _ITeacherService.GetAllTeachers();
         }
     }
 }
