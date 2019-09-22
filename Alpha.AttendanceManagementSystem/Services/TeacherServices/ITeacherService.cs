@@ -10,13 +10,15 @@ namespace Alpha.AttendanceManagementSystem.Services.TeacherServices
     {
         List<Teacher_IdAndName> GetAllTeachers();
 
-        Teacher GetTeacherById(int teacherId);
+        Teacher_IdAndName GetTeacherById(int teacherId);
 
         TeacherAttendanceReport GetTeacherReportById(int teacherId);
 
         void MarkAttendance(string subjectId);
 
         List<Subject> GetSubjectsUnderTeacher(int teacherId);
+        Subject GetSubjectUnderTeacher(int teacherId, string subjectId);
+
 
         List<StudentAttendanceReport> GetStudentReport();
 

@@ -15,7 +15,7 @@ namespace AMS.MiddleLayer
         public string Id { get; set; }
         public string Name { get; set; }
         public Teacher Teacher { get; set; }
-        public int TotalAttendance { get; set; }
+        public int TotalClassesTaken { get; set; }
        
         public ref Dictionary<int, int> GetEnrolledStudents()
         {

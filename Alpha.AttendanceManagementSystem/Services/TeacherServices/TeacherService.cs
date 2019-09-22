@@ -29,16 +29,23 @@ namespace Alpha.AttendanceManagementSystem.Services.TeacherServices
 
         public List<Subject> GetSubjectsUnderTeacher(int teacherId)
         {
-            var subjectListUnderTeacher = new List<Subject>();
-            foreach (var subject in Databases.Subjects)
-            {
-                if (subject.Teacher.Id == teacherId)
-                    subjectListUnderTeacher.Add(subject);
-            }
-            return subjectListUnderTeacher;
+            var list = Databases.Subjects.Where(s => s.Teacher.Id == teacherId).ToList<Subject>();
+            return list;
         }
 
-        public Teacher GetTeacherById(int teacherId)
+        public Subject GetSubjectUnderTeacher(int teacherId, string subjectId)
+        {
+            Subject subject = null;
+            var list = Databases.Subjects.Where(s => s.Teacher.Id == teacherId).ToList<Subject>();
+            foreach(var sub in list)
+            {
+                if (sub.Id == subjectId)
+                    subject = sub;
+            }
+            return subject;
+        }
+
+        public Teacher_IdAndName GetTeacherById(int teacherId)
         {
             Teacher teacher = null;
             foreach (var t in Databases.Teachers)
@@ -49,13 +56,13 @@ namespace Alpha.AttendanceManagementSystem.Services.TeacherServices
                     break;
                 }
             }
-            return teacher;
+            return new Teacher_IdAndName() { id = teacher.Id, name = teacher.Name };
         }
 
         public TeacherAttendanceReport GetTeacherReportById(int teacherId)
         {
-            var teacher = Databases.Teachers.Where((t) => t.Id == teacherId).ToList<Teacher>();
-            return new TeacherAttendanceReport(teacher[0]);
+            Teacher teacher = Databases.Teachers.Find(t => t.Id == teacherId);
+            return teacher.ViewReport();
         }
 
         public void MarkAttendance(string subjectId)
@@ -70,5 +77,7 @@ namespace Alpha.AttendanceManagementSystem.Services.TeacherServices
             Teacher teacher = Databases.Teachers.Find(t => t.Id == teacherId);
             teacher.EligiblePercentage = value;
         }
+
+        
     }
 }

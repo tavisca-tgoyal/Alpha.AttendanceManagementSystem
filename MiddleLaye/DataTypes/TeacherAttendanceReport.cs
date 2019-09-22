@@ -18,7 +18,7 @@ namespace AMS.MiddleLayer.DataTypes
             {
                 if(teacher.Id == subject.Teacher.Id)
                 {
-                    NoOfClassesTaken += subject.TotalAttendance;
+                    NoOfClassesTaken += subject.TotalClassesTaken;
                 }
             }
         }

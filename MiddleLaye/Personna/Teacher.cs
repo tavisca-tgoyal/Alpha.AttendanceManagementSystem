@@ -24,7 +24,7 @@ namespace AMS.MiddleLayer.Personna
             {
                 studentList[student] += 1;
             }
-            subject.TotalAttendance += 1;
+            subject.TotalClassesTaken += 1;
         }
 
         public List<StudentAttendanceReport> ViewStudentAttendanceReport() {

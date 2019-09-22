@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Alpha.AttendanceManagementSystem.Services;
 using Alpha.AttendanceManagementSystem.Services.DataTypes;
 using Alpha.AttendanceManagementSystem.Services.TeacherServices;
+using AMS.MiddleLayer;
 using AMS.MiddleLayer.DataTypes;
 using AMS.MiddleLayer.Personna;
 using Microsoft.AspNetCore.Http;
@@ -22,7 +23,7 @@ namespace Alpha.AttendanceManagementSystem.Controllers
             _ITeacherService = TeacherService;
         }
 
-
+        //api/teacher
         [HttpGet]
         public ActionResult Get()
         {
@@ -31,24 +32,49 @@ namespace Alpha.AttendanceManagementSystem.Controllers
 
         //api/teacher/id
         [HttpGet("{id}")]
-        public Teacher Get(int id)
+        public Teacher_IdAndName Get(int id)
         {
             return _ITeacherService.GetTeacherById(id);
         }
 
-        //api/teacher/id/report?teacher=true
+        //api/teacher/id/report?teacher=true&student=false ///doesn't seems like working as expected
         [HttpGet]
-        public TeacherAttendanceReport Get(int teacherId, [FromQuery] bool teacher = true)
+        [Route("{teacherId}/report")]
+        public ActionResult Get(int teacherId, [FromQuery] bool teacher = true, [FromQuery] bool student = false)
         {
-            return _ITeacherService.GetTeacherReportById(teacherId);
+            if (teacher == true)
+                return Ok(_ITeacherService.GetTeacherReportById(teacherId));
+            else
+                return Ok(_ITeacherService.GetStudentReport());
         }
 
-        
-        //[HttpPost("{teacherId}/{subject}/{subjectId}/{takeattendance}")]
-        //public void Post(int subjectId, int subjectId)
-        //{
-            
-        //}
-        
+
+        //printing all the subjects under a particular teacher
+        //api/teacher/id/subject
+        [HttpGet]
+        [Route("{teacherId}/subject")]
+        public ActionResult Get(int teacherId,int var)
+        {
+            return Ok(_ITeacherService.GetSubjectsUnderTeacher(teacherId));
+        }
+
+        //printing  the subject under a particular teacher by subject id
+        //api/teacher/id/subject/id
+        [HttpGet]
+        [Route("{teacherId}/subject/{subjectId}")]
+        public ActionResult Get(int teacherId,string subjectId)
+        {
+            return Ok(_ITeacherService.GetSubjectUnderTeacher(teacherId,subjectId));
+        }
+
+        //api/teacher/id/subject/id/takeattendance
+        [HttpPost]
+        [Route("{teacherId}/subject/{subjectId}/takeattendance")]
+        public void Post(int teacherId,string subjectId)
+        {
+           _ITeacherService.MarkAttendance(subjectId);
+        }
+
+
     }
 }

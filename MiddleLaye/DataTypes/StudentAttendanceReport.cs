@@ -23,7 +23,7 @@ namespace AMS.MiddleLayer
                 if(dictOfAttendence.ContainsKey(student.Id))
                 {
                     NoOfClassesAttended += dictOfAttendence[student.Id];
-                    NoOfClassesTaken += subject.TotalAttendance;
+                    NoOfClassesTaken += subject.TotalClassesTaken;
                 }
             }
             AttendancePercentage = (Double)decimal.Divide(NoOfClassesAttended, NoOfClassesTaken);

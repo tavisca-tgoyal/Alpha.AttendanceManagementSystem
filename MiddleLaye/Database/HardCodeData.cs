@@ -24,7 +24,7 @@ namespace AMS.MiddleLayer.Database
                 new Subject { Id = subjectId,
                     Name = subjectName,
                     Teacher = Databases.Teachers[0],
-                    TotalAttendance = 5,
+                    TotalClassesTaken = 5,
                     StudentAttendance = new Dictionary<int, int> { { Databases.Students[i++].Id, new Random().Next(5) },
                                                                    { Databases.Students[i++].Id, new Random().Next(5) },
                                                                    { Databases.Students[i++].Id, new Random().Next(5) },
