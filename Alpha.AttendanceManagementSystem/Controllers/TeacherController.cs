@@ -20,9 +20,9 @@ namespace Alpha.AttendanceManagementSystem.Controllers
             _ITeacherService = TeacherService;
         }
         [HttpGet]
-        public List<Teacher_IdAndName> Get()
+        public ActionResult Get()
         {
-            return _ITeacherService.GetAllTeachers();
+            return Ok(_ITeacherService.GetAllTeachers());
         }
     }
 }
