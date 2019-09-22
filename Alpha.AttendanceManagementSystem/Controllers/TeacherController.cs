@@ -24,9 +24,9 @@ namespace Alpha.AttendanceManagementSystem.Controllers
 
 
         [HttpGet]
-        public List<Teacher_IdAndName> Get()
+        public ActionResult Get()
         {
-            return _ITeacherService.GetAllTeachers();
+            return Ok(_ITeacherService.GetAllTeachers());
         }
 
         //api/teacher/id
